@@ -1,0 +1,79 @@
+@tailwind base;
+
+a:hover {
+    @apply   text-oniPrimary
+}
+
+@tailwind components;
+@tailwind utilities;
+
+/* Oxygen Normal */
+@font-face {
+    font-family: "Oxygen";
+    src: url("/fonts/Oxygen-Regular.ttf") format("truetype");
+    font-weight: 400;
+}
+
+/* Oxygen Light */
+@font-face {
+    font-family: "Oxygen";
+    src: url("/fonts/Oxygen-Light.ttf") format("truetype");
+    font-weight: 300;
+    line-height: 150%;
+}
+
+@layer base {
+    html {
+        font-family: "Oxygen", system-ui, sans-serif;
+    }
+}
+
+body {
+    background-color: #dfe5e5;
+}
+
+
+/* input {
+    min-width:min-content;
+    width: min-content;
+    max-width: min-content;
+} */
+
+.oniAnimated, a, a:hover  {
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px #EAEAEA inset !important;
+}
+
+
+
+/* :root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+} */

@@ -1,0 +1,38 @@
+npm run dev
+
+docker build . -t just-test3-front
+
+docker run -p 3000:3000 just-test2-front:latest
+
+docker images
+docker ps -a
+
+docker rmi b5122490989
+docker remove 0f628eec0cf2
+
+// docker build --no-cache . -t ghcr.io/on9983/just-test2-front:latest
+
+docker login ghcr.io
+
+docker build . -t ghcr.io/on9983/just-test2-front:latest
+docker push ghcr.io/on9983/just-test2-front:latest
+-> (sur lautre machine) -> :
+docker pull ghcr.io/on9983/just-test2-front:latest
+
+
+docker build . -t ghcr.io/on9983/just-test2-front:latest --no-cache
+
+SSL GENERATE CERFITIF, (dans le vps?) :
+
+openssl genrsa -out www.598623u-no-on.fr.key 2048 
+
+Cas pem:
+openssl req -new -key www.598623u-no-on.fr.key -out www.598623u-no-on.fr.pem -outform PEM
+
+Cas csr:
+openssl req -new -key www.598623u-no-on.fr.key -out www.598623u-no-on.fr.csr 
+
+
+
+TEST UNITAIRE
+npm run test
